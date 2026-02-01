@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobbbot's PFP Generator</title>
+    <link rel="icon" type="image/x-icon" href="images/icons/hobbbot.png">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jscolor/2.5.2/jscolor.min.js"></script>
+  </head>
+  <body onload="drawPfp(readColor())">
+    <h1 id="title">HOBBBOT'S PFP GENERATOR</h1>
+    <input id="intruder-color-input" data-jscolor="{
+    preset:'dark',
+    onInput: 'drawPfp(this)',
+    borderColor:'rgba(0,0,0,1)', borderWidth:4, borderRadius:0, 
+    controlBorderColor:'rgba(0,0,0,1)', controlBorderWidth:4, 
+    pointerThickness:2, pointerColor:'rgba(255,255,255,1)', 
+    pointerBorderColor:'rgba(0,0,0,1)', pointerBorderWidth:2,
+    value: '#0040FF',
+    shadow: false
+    }">
+
+    <canvas id="pfp-preview" width="620" height="620"></canvas>
+
+    <button id="download-btn" onclick="downloadCanvasAsPng()">DOWNLOAD</button>
+  </body>
+  <script src="scripts/script.js"></script>
+</html>
